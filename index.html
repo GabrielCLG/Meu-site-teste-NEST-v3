@@ -184,10 +184,17 @@
                         Sua parceira estratégica em produção e pós-produção audiovisual. Transformamos narrativas em conteúdo de alto impacto.
                     </p>
                     
-                    <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4">
-                        <a href="#contato" class="inline-flex items-center justify-center gap-2 bg-nest-brand text-nest-black px-8 py-4 rounded-full text-base font-bold hover:bg-nest-brand-light transition-colors shadow-[0_0_20px_rgba(252,152,4,0.3)]">
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <!-- Botão Acessar Portfólio -->
+                        <a href="#portfolio" class="inline-flex items-center justify-center gap-2 bg-nest-brand-light text-nest-black px-[25px] py-4 rounded-full text-base font-bold hover:bg-[#f2ece4] transition-all w-full sm:w-auto group">
+                            Acessar portfólio completo
+                            <i class="fa-solid fa-arrow-right -rotate-45 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"></i>
+                        </a>
+                        
+                        <!-- Botão Orçamento -->
+                        <a href="#contato" class="inline-flex items-center justify-center gap-2 bg-nest-brand text-nest-black px-[25px] py-4 rounded-full text-base font-bold hover:bg-[#f2ece4] transition-all shadow-[0_0_20px_rgba(252,152,4,0.3)] w-full sm:w-auto group">
                             Fazer um orçamento
-                            <i class="fa-solid fa-arrow-right"></i>
+                            <i class="fa-solid fa-arrow-right -rotate-45 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"></i>
                         </a>
                     </div>
                 </div>
@@ -195,49 +202,64 @@
                 <!-- Coluna Direita: Carrossel de Vídeos + Controles -->
                 <div class="relative w-full flex flex-col opacity-0 animate-fade-in-up" style="animation-delay: 0.3s;">
                     
-                    <!-- Pista horizontal de vídeos (Agora com 5 vídeos) -->
+                    <!-- Pista horizontal de vídeos -->
                     <div id="video-scroll-container" class="flex gap-4 overflow-x-auto pb-2 pt-2 px-1 snap-x snap-mandatory scrollbar-none [-ms-overflow-style:none] [scrollbar-width:none] max-w-full cursor-grab active:cursor-grabbing select-none" style="scrollbar-width: none; -webkit-overflow-scrolling: touch;">
                         
                         <!-- VÍDEO 1 -->
                         <div class="w-[200px] sm:w-[220px] flex-shrink-0 snap-center rounded-2xl overflow-hidden aspect-[9/16] border border-white/5 bg-nest-gray relative shadow-md pointer-events-none">
                             <video src="videos/video1.mp4" class="w-full h-full object-cover" autoplay loop muted playsinline></video>
                             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none"></div>
+                            <button class="mute-btn absolute bottom-3 right-3 w-8 h-8 flex items-center justify-center rounded-full bg-black/40 backdrop-blur-sm text-white/80 hover:text-white hover:bg-black/60 transition-all border border-white/10 pointer-events-auto z-10 cursor-pointer">
+                                <i class="fa-solid fa-volume-xmark text-[11px]"></i>
+                            </button>
                         </div>
 
                         <!-- VÍDEO 2 -->
                         <div class="w-[200px] sm:w-[220px] flex-shrink-0 snap-center rounded-2xl overflow-hidden aspect-[9/16] border border-white/5 bg-nest-gray relative shadow-md pointer-events-none">
                             <video src="videos/video2.mp4" class="w-full h-full object-cover" autoplay loop muted playsinline></video>
                             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none"></div>
+                            <button class="mute-btn absolute bottom-3 right-3 w-8 h-8 flex items-center justify-center rounded-full bg-black/40 backdrop-blur-sm text-white/80 hover:text-white hover:bg-black/60 transition-all border border-white/10 pointer-events-auto z-10 cursor-pointer">
+                                <i class="fa-solid fa-volume-xmark text-[11px]"></i>
+                            </button>
                         </div>
 
                         <!-- VÍDEO 3 -->
                         <div class="w-[200px] sm:w-[220px] flex-shrink-0 snap-center rounded-2xl overflow-hidden aspect-[9/16] border border-white/5 bg-nest-gray relative shadow-md pointer-events-none">
                             <video src="videos/video3.mp4" class="w-full h-full object-cover" autoplay loop muted playsinline></video>
                             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none"></div>
+                            <button class="mute-btn absolute bottom-3 right-3 w-8 h-8 flex items-center justify-center rounded-full bg-black/40 backdrop-blur-sm text-white/80 hover:text-white hover:bg-black/60 transition-all border border-white/10 pointer-events-auto z-10 cursor-pointer">
+                                <i class="fa-solid fa-volume-xmark text-[11px]"></i>
+                            </button>
                         </div>
 
                         <!-- VÍDEO 4 -->
                         <div class="w-[200px] sm:w-[220px] flex-shrink-0 snap-center rounded-2xl overflow-hidden aspect-[9/16] border border-white/5 bg-nest-gray relative shadow-md pointer-events-none">
                             <video src="videos/video4.mp4" class="w-full h-full object-cover" autoplay loop muted playsinline></video>
                             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none"></div>
+                            <button class="mute-btn absolute bottom-3 right-3 w-8 h-8 flex items-center justify-center rounded-full bg-black/40 backdrop-blur-sm text-white/80 hover:text-white hover:bg-black/60 transition-all border border-white/10 pointer-events-auto z-10 cursor-pointer">
+                                <i class="fa-solid fa-volume-xmark text-[11px]"></i>
+                            </button>
                         </div>
 
                         <!-- VÍDEO 5 -->
                         <div class="w-[200px] sm:w-[220px] flex-shrink-0 snap-center rounded-2xl overflow-hidden aspect-[9/16] border border-white/5 bg-nest-gray relative shadow-md pointer-events-none">
                             <video src="videos/video5.mp4" class="w-full h-full object-cover" autoplay loop muted playsinline></video>
                             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none"></div>
+                            <button class="mute-btn absolute bottom-3 right-3 w-8 h-8 flex items-center justify-center rounded-full bg-black/40 backdrop-blur-sm text-white/80 hover:text-white hover:bg-black/60 transition-all border border-white/10 pointer-events-auto z-10 cursor-pointer">
+                                <i class="fa-solid fa-volume-xmark text-[11px]"></i>
+                            </button>
                         </div>
                     </div>
 
-                    <!-- Controles de Navegação (Barra na esquerda, setas na direita) -->
+                    <!-- Controles de Navegação -->
                     <div class="flex justify-between items-center w-full mt-5 px-1">
                         
-                        <!-- Barra de Progresso Única Deslizante (w-1/5 = 20% para 5 itens) -->
+                        <!-- Barra de Progresso Única Deslizante -->
                         <div class="relative w-28 sm:w-40 h-1 bg-white/10 rounded-full overflow-hidden">
                             <div id="scroll-progress-thumb" class="absolute top-0 left-0 h-full w-1/5 bg-[#c65812] rounded-full transition-all duration-100 ease-out"></div>
                         </div>
                         
-                        <!-- Contador e Setas com mais espaço -->
+                        <!-- Contador e Setas -->
                         <div class="flex items-center gap-4">
                             <span id="video-counter" class="text-gray-400 font-mono text-xs tracking-widest whitespace-nowrap">01 &bull; 05</span>
                             <div class="flex gap-1.5">
@@ -515,9 +537,9 @@
             let activeIndex = Math.round(scrollPosition / itemWidth);
             
             if (activeIndex < 0) activeIndex = 0;
-            if (activeIndex > 4) activeIndex = 4; // <--- Limite de 5 vídeos
+            if (activeIndex > 4) activeIndex = 4; 
 
-            counter.innerHTML = `0${activeIndex + 1} &bull; 05`; // <--- Atualizado
+            counter.innerHTML = `0${activeIndex + 1} &bull; 05`; 
 
             // 2. Atualizar a Posição da Barrinha Laranja
             let progress = 0;
@@ -542,6 +564,32 @@
         nextBtn.addEventListener('click', () => {
             const itemWidth = slider.children[0].offsetWidth + 16;
             slider.scrollBy({ left: itemWidth, behavior: 'smooth' });
+        });
+
+        // --- CONTROLE DE ÁUDIO DOS VÍDEOS ---
+        const muteButtons = document.querySelectorAll('.mute-btn');
+        muteButtons.forEach(btn => {
+            // Previne que o clique no botão ative o arraste do carrossel
+            btn.addEventListener('mousedown', (e) => e.stopPropagation());
+            
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation(); 
+                
+                const video = btn.parentElement.querySelector('video');
+                const icon = btn.querySelector('i');
+                
+                if (video.muted) {
+                    // Liga o som
+                    video.muted = false;
+                    icon.classList.remove('fa-volume-xmark');
+                    icon.classList.add('fa-volume-high');
+                } else {
+                    // Desliga o som
+                    video.muted = true;
+                    icon.classList.remove('fa-volume-high');
+                    icon.classList.add('fa-volume-xmark');
+                }
+            });
         });
 
         // Força uma atualização inicial
