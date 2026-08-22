@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon/favicon.png" type="image/png">
     <title>Nest Movv | Produtora Audiovisual</title>
     <meta name="description" content="Produtora de produção e pós-produção audiovisual. Especialistas em vídeos para redes sociais e criadores de conteúdo.">
     
@@ -102,7 +103,7 @@
             transform: translateY(0);
         }
 
-        /* Scrollbar */
+        /* Scrollbar Oculta para a pista de vídeos */
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #0A0A0A; }
         ::-webkit-scrollbar-thumb { background: #2A2A2A; border-radius: 4px; }
@@ -115,10 +116,10 @@
         <div class="px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-[55px]">
                 <div class="flex-shrink-0 flex items-center space-x-3 cursor-pointer pl-2 md:pl-0" onclick="window.scrollTo(0,0)">
-                    <img src="images/Nova_Logo_Nest_site.png" alt="Nest Movv Logo" style="height: 47px; width: auto; object-fit: contain;">
+                    <img src="images/Nova_Logo_Nest_site.png" alt="Nest Movv Logo" style="height: 44px; width: auto; object-fit: contain;">
                     <div class="flex flex-col justify-center leading-tight">
-                        <span style="font-family: Arial, sans-serif; font-size: 13px; font-weight: bold; letter-spacing: normal;" class="text-white">Nest Movv</span>
-                        <span style="font-family: Arial, sans-serif; font-size: 7px; font-weight: normal; letter-spacing: normal;" class="text-gray-400">Produtora Audiovisual</span>
+                        <span style="font-family: Arial, sans-serif; font-size: 16px; font-weight: bold; letter-spacing: normal;" class="text-white">Nest Movv</span>
+                        <span style="font-family: Arial, sans-serif; font-size: 12px; font-weight: normal; letter-spacing: normal;" class="text-gray-400">Produtora Audiovisual</span>
                     </div>
                 </div>
                 
@@ -156,7 +157,8 @@
         </div>
     </nav>
 
-    <section class="relative pt-[120px] pb-20 lg:pt-[180px] lg:pb-32 overflow-hidden min-h-[90vh] flex items-center">
+    <!-- Espaçamento ajustado no Hero -->
+    <section class="relative pt-[120px] pb-10 lg:pt-[180px] lg:pb-16 overflow-hidden min-h-[85vh] flex items-center">
         <!-- Fundo sutil com a equipe -->
         <div class="absolute inset-0 w-full h-full z-0 pointer-events-none opacity-20">
             <div class="absolute inset-0 bg-nest-black/80 z-10"></div>
@@ -167,19 +169,18 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 w-full">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-8 items-center">
                 
-                <!-- Coluna Esquerda: Texto centralizado em mobile/tablet e alinhado à esquerda em PC -->
+                <!-- Coluna Esquerda -->
                 <div class="text-center lg:text-left opacity-0 animate-fade-in-up" style="animation-delay: 0.1s;">
                     <h1 class="mb-4">
                         <span class="block text-5xl md:text-6xl lg:text-7xl font-bold text-nest-gray-light leading-[1.1] mb-2 tracking-[-4px]" style="font-family: Arial, sans-serif;">
                             Ideias que geram
                         </span>
-                        <!-- Usando a fonte Noto Serif ExtraCondensed Itálica nativa, cor f0c481 e -25px de margem topo -->
                         <span class="block text-6xl md:text-7xl lg:text-8xl font-notoserif text-[#f0c481] -mt-[25px] py-2">
                             movimento.
                         </span>
                     </h1>
                     
-                    <p class="text-[20px] md:text-[18px] text-gray-400 mb-10 font-light leading-relaxed max-w-lg mx-auto lg:mx-0">
+                    <p class="text-[18px] md:text-[22px] text-gray-400 mb-10 font-light leading-relaxed max-w-lg mx-auto lg:mx-0">
                         Sua parceira estratégica em produção e pós-produção audiovisual. Transformamos narrativas em conteúdo de alto impacto.
                     </p>
                     
@@ -191,30 +192,65 @@
                     </div>
                 </div>
 
-                <!-- Coluna Direita: Carrossel Horizontal de Vídeos Lado a Lado (Centralizado no mobile/tablet, alinhado à direita no PC) -->
-                <div class="relative w-full flex justify-center lg:justify-end opacity-0 animate-fade-in-up" style="animation-delay: 0.3s;">
-                    <!-- Pista horizontal de rolagem de vídeos lado a lado com suporte a arrastar com o mouse -->
-                    <div id="video-scroll-container" class="flex gap-4 overflow-x-auto pb-4 pt-2 px-1 snap-x snap-mandatory scrollbar-none [-ms-overflow-style:none] [scrollbar-width:none] max-w-full cursor-grab active:cursor-grabbing select-none" style="scrollbar-width: none; -webkit-overflow-scrolling: touch;">
+                <!-- Coluna Direita: Carrossel de Vídeos + Controles -->
+                <div class="relative w-full flex flex-col opacity-0 animate-fade-in-up" style="animation-delay: 0.3s;">
+                    
+                    <!-- Pista horizontal de vídeos (Agora com 5 vídeos) -->
+                    <div id="video-scroll-container" class="flex gap-4 overflow-x-auto pb-2 pt-2 px-1 snap-x snap-mandatory scrollbar-none [-ms-overflow-style:none] [scrollbar-width:none] max-w-full cursor-grab active:cursor-grabbing select-none" style="scrollbar-width: none; -webkit-overflow-scrolling: touch;">
                         
                         <!-- VÍDEO 1 -->
                         <div class="w-[200px] sm:w-[220px] flex-shrink-0 snap-center rounded-2xl overflow-hidden aspect-[9/16] border border-white/5 bg-nest-gray relative shadow-md pointer-events-none">
-                            <video src="videos/Como me tornei Videomaker e Editor de vídeos_low.mp4" class="w-full h-full object-cover" autoplay loop muted playsinline></video>
+                            <video src="videos/video1.mp4" class="w-full h-full object-cover" autoplay loop muted playsinline></video>
                             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none"></div>
                         </div>
 
                         <!-- VÍDEO 2 -->
                         <div class="w-[200px] sm:w-[220px] flex-shrink-0 snap-center rounded-2xl overflow-hidden aspect-[9/16] border border-white/5 bg-nest-gray relative shadow-md pointer-events-none">
-                            <video src="videos/Como me tornei Videomaker e Editor de vídeos_low.mp4" class="w-full h-full object-cover" autoplay loop muted playsinline></video>
+                            <video src="videos/video2.mp4" class="w-full h-full object-cover" autoplay loop muted playsinline></video>
                             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none"></div>
                         </div>
 
                         <!-- VÍDEO 3 -->
                         <div class="w-[200px] sm:w-[220px] flex-shrink-0 snap-center rounded-2xl overflow-hidden aspect-[9/16] border border-white/5 bg-nest-gray relative shadow-md pointer-events-none">
-                            <video src="videos/Como me tornei Videomaker e Editor de vídeos_low.mp4" class="w-full h-full object-cover" autoplay loop muted playsinline></video>
+                            <video src="videos/video3.mp4" class="w-full h-full object-cover" autoplay loop muted playsinline></video>
                             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none"></div>
                         </div>
 
+                        <!-- VÍDEO 4 -->
+                        <div class="w-[200px] sm:w-[220px] flex-shrink-0 snap-center rounded-2xl overflow-hidden aspect-[9/16] border border-white/5 bg-nest-gray relative shadow-md pointer-events-none">
+                            <video src="videos/video4.mp4" class="w-full h-full object-cover" autoplay loop muted playsinline></video>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none"></div>
+                        </div>
+
+                        <!-- VÍDEO 5 -->
+                        <div class="w-[200px] sm:w-[220px] flex-shrink-0 snap-center rounded-2xl overflow-hidden aspect-[9/16] border border-white/5 bg-nest-gray relative shadow-md pointer-events-none">
+                            <video src="videos/video5.mp4" class="w-full h-full object-cover" autoplay loop muted playsinline></video>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none"></div>
+                        </div>
                     </div>
+
+                    <!-- Controles de Navegação (Barra na esquerda, setas na direita) -->
+                    <div class="flex justify-between items-center w-full mt-5 px-1">
+                        
+                        <!-- Barra de Progresso Única Deslizante (w-1/5 = 20% para 5 itens) -->
+                        <div class="relative w-28 sm:w-40 h-1 bg-white/10 rounded-full overflow-hidden">
+                            <div id="scroll-progress-thumb" class="absolute top-0 left-0 h-full w-1/5 bg-[#c65812] rounded-full transition-all duration-100 ease-out"></div>
+                        </div>
+                        
+                        <!-- Contador e Setas com mais espaço -->
+                        <div class="flex items-center gap-4">
+                            <span id="video-counter" class="text-gray-400 font-mono text-xs tracking-widest whitespace-nowrap">01 &bull; 05</span>
+                            <div class="flex gap-1.5">
+                                <button id="prev-video" class="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/5 transition-colors text-gray-400 hover:text-white">
+                                    <i class="fa-solid fa-chevron-left text-[10px]"></i>
+                                </button>
+                                <button id="next-video" class="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/5 transition-colors text-gray-400 hover:text-white">
+                                    <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
 
             </div>
@@ -226,8 +262,10 @@
         </div>
     </section>
 
-    <section class="py-16 md:py-20 bg-nest-black reveal-on-scroll">
+    <!-- Subimos o padding superior desta seção (pt-10) -->
+    <section class="pt-10 pb-16 md:pt-12 md:pb-20 bg-nest-black reveal-on-scroll">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <!-- Título atualizado -->
             <h2 class="font-display text-4xl md:text-5xl font-bold mb-12 text-nest-brand-light">Como podemos te ajudar agora?</h2>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -270,6 +308,7 @@
                     <div class="w-14 h-14 bg-nest-gray rounded-2xl flex items-center justify-center mb-8 border border-white/5">
                         <i class="fa-solid fa-video text-2xl text-nest-brand"></i>
                     </div>
+                    <!-- Cor alterada para #f2ece4 -->
                     <h3 class="font-display text-2xl md:text-3xl font-bold mb-4 text-[#f2ece4]">Produção<br>Audiovisual</h3>
                     <p class="text-gray-400 mb-8 leading-relaxed">
                         Captação profissional de imagem e áudio. Ideal para profissionais, marcas e eventos que buscam criar conteúdo de alta qualidade com estratégia voltada para as redes sociais.
@@ -295,6 +334,7 @@
                     <div class="w-14 h-14 bg-nest-gray rounded-2xl flex items-center justify-center mb-8 border border-white/5">
                         <i class="fa-solid fa-scissors text-2xl text-nest-brand-light"></i>
                     </div>
+                    <!-- Cor alterada para #f2ece4 -->
                     <h3 class="font-display text-2xl md:text-3xl font-bold mb-4 text-[#f2ece4]">Pós-Produção &<br>Edição</h3>
                     <p class="text-gray-400 mb-8 leading-relaxed">
                         A mágica acontece aqui. Edição dinâmica e retentiva para criadores de conteúdo, agências e filmmakers que precisam de um parceiro de confiança para finalizar seus projetos.
@@ -328,7 +368,7 @@
                 
                 <a href="#" class="inline-flex items-center justify-center gap-2 bg-nest-brand text-nest-black px-8 py-4 rounded-full text-lg font-bold hover:bg-nest-brand-light transition-all transform hover:scale-105 relative z-10 shadow-[0_0_20px_rgba(252,152,4,0.3)] hover:shadow-[0_0_30px_rgba(240,196,129,0.5)]">
                     <i class="fa-brands fa-whatsapp text-2xl"></i>
-                    Falar com a Produtora
+                    Fale com a gente
                 </a>
             </div>
 
@@ -343,9 +383,9 @@
                 <div>
                     <h4 class="text-nest-brand-light font-bold mb-4 font-display">Contato</h4>
                     <ul class="space-y-2 text-sm text-gray-400">
-                        <li><a href="#" class="hover:text-white transition-colors">contato@nestmovv.com.br</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">+55 (00) 00000-0000</a></li>
-                        <li>Brasil</li>
+                        <li><a href="#" class="hover:text-white transition-colors">nestmovv.audiovisual@gamil.com</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">+55 (27) 98896 - 3690</a></li>
+                        <li>Serra -ES/Brasil</li>
                     </ul>
                 </div>
 
@@ -430,7 +470,7 @@
             if (rafId) cancelAnimationFrame(rafId);
             startX = e.pageX - slider.offsetLeft;
             scrollLeft = slider.scrollLeft;
-            slider.style.scrollSnapType = 'none'; // Desativa o snap momentaneamente para arrastar solto
+            slider.style.scrollSnapType = 'none';
         });
 
         slider.addEventListener('mouseleave', () => {
@@ -449,13 +489,63 @@
             if (!isDown) return;
             e.preventDefault();
             const x = e.pageX - slider.offsetLeft;
-            const walk = (x - startX) * 1.5; // Fator de sensibilidade otimizado
+            const walk = (x - startX) * 1.5;
             
             if (rafId) cancelAnimationFrame(rafId);
             rafId = requestAnimationFrame(() => {
                 slider.scrollLeft = scrollLeft - walk;
             });
         });
+
+        // --- CONTROLES DE NAVEGAÇÃO DO CARROSSEL DE VÍDEOS ---
+        const prevBtn = document.getElementById('prev-video');
+        const nextBtn = document.getElementById('next-video');
+        const counter = document.getElementById('video-counter');
+        const thumb = document.getElementById('scroll-progress-thumb');
+
+        // Função para atualizar a barrinha deslizante e o contador de números
+        function updateSliderUI() {
+            if (!slider) return;
+            
+            const scrollPosition = slider.scrollLeft;
+            const maxScroll = slider.scrollWidth - slider.clientWidth;
+            const itemWidth = slider.children[0].offsetWidth + 16; 
+            
+            // 1. Atualizar o Contador (01 a 05)
+            let activeIndex = Math.round(scrollPosition / itemWidth);
+            
+            if (activeIndex < 0) activeIndex = 0;
+            if (activeIndex > 4) activeIndex = 4; // <--- Limite de 5 vídeos
+
+            counter.innerHTML = `0${activeIndex + 1} &bull; 05`; // <--- Atualizado
+
+            // 2. Atualizar a Posição da Barrinha Laranja
+            let progress = 0;
+            if (maxScroll > 0) {
+                progress = scrollPosition / maxScroll;
+            }
+            progress = Math.max(0, Math.min(1, progress));
+
+            if (thumb) {
+                // Como a thumb ocupa 20% da trilha, ela anda nos 80% restantes
+                thumb.style.left = `${progress * 80}%`;
+            }
+        }
+
+        slider.addEventListener('scroll', updateSliderUI);
+
+        prevBtn.addEventListener('click', () => {
+            const itemWidth = slider.children[0].offsetWidth + 16;
+            slider.scrollBy({ left: -itemWidth, behavior: 'smooth' });
+        });
+
+        nextBtn.addEventListener('click', () => {
+            const itemWidth = slider.children[0].offsetWidth + 16;
+            slider.scrollBy({ left: itemWidth, behavior: 'smooth' });
+        });
+
+        // Força uma atualização inicial
+        updateSliderUI();
     </script>
 </body>
 </html>
